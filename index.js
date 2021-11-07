@@ -85,4 +85,5 @@ client.on('ready', () => {
 });
 
 // Login to channel on script start
+// Token will no longer work and must be reset when demoing
 client.login("ODk0MzY5NDU4NjM2ODUzMjU5.YVpAdw.BUJLQkxzDr5mQ7kzDn0Ag3NUk6w");
