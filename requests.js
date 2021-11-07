@@ -1,10 +1,19 @@
-const axios = require('axios');
+/**
+ * Responsible for handling api requests
+ * Includes requests related to both Rick and Morty API and DnD API
+ */
 
-// Functions to return data with parameters
+const axios = require('axios');
 
 // Rick and Morty Endpoints
 const ramRoot = "https://rickandmortyapi.com/api/";
 
+/**
+ * Finds character by name and status
+ * @param {The name of the character} name 
+ * @param {Alive, Dead, or Unknown} status 
+ * @returns Formatted string response
+ */
 async function characterNameAndStatus(name, status) {
     try {
         // Facilitate request
@@ -38,6 +47,12 @@ async function characterNameAndStatus(name, status) {
     }
 }
 
+/**
+ * Finds location by name and type
+ * @param {The name of the location} name 
+ * @param {The type of the planet (ex. Planet)} type 
+ * @returns Formatted string response
+ */
 async function locationNameAndType(name, type) {
     try {
         // Facilitate request
@@ -65,12 +80,16 @@ async function locationNameAndType(name, type) {
         return reply;
 
     } catch (err) {
-
         // Return response with zero results 
         return "0 locations were found. Be sure you formatted your request properly."
     }
 }
 
+/**
+ * Finds episode details by episode number
+ * @param {The number of the episode} number 
+ * @returns Formatted string response
+ */
 async function episodeNumber(number) {
     try {
         // Facilitate request        
@@ -79,19 +98,26 @@ async function episodeNumber(number) {
 
         // Formulate response
         let reply = "Episode found:\n"
-        reply += `Name: ${data.name} \nAir Data: ${data.air_date} \nSeason: ${data.episode}`
+        reply += `Name: ${data.name} \nAir Date: ${data.air_date} \nSeason: ${data.episode}`
+
         return reply;
 
     } catch (err) {
 
         // Return response with zero results 
-        return "Unable to find episode."
+        return `Episode ${number} does not exist. Be sure you formatted your request properly.`
     }
 }
 
 // DnD Endpoints
 const dndRoot = "https://www.dnd5eapi.co/api/";
 
+/**
+ * Finds class level up details by class and number
+ * @param {The class name} charClass 
+ * @param {The level-up level} level 
+ * @returns Formatted string response
+ */
 async function classAndLevel(charClass, level) {
     try {
         // Facilitate request        
@@ -112,10 +138,15 @@ async function classAndLevel(charClass, level) {
 
     } catch (err) {
         // Return response with zero results 
-        return "Could not find class and level combination."
+        return "No results for class and level combination. Be sure you formatted your request properly."
     }
 }
 
+/**
+ * Finds all monsters with challenge rating
+ * @param {The challenge rating} rating 
+ * @returns Formatted string response
+ */
 async function monsterRating(rating) {
     try {
         // Facilitate request        
@@ -136,7 +167,7 @@ async function monsterRating(rating) {
 
     } catch (err) {
         // Return response with zero results 
-        return "Could not find any monsters with that rating."
+        return "Could not find any monsters with that rating. Be sure you formatted your request properly."
     }
 }
 

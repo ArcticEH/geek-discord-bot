@@ -1,0 +1,85 @@
+Rick and Morty Commands
+	Include 'ram' before entering command
+
+1. Find Rick and Morty Characters by name and status
+	Command: 
+		geekbot ram char [name] [status]
+	Params:
+		[name] - The name of the character
+		[status] - If the character is alive (alive, dead, or unknown)
+	Returns: 
+		A count and list of all the characters that match the given parameters. 
+	Example: 
+		geekbot ram char rick alive
+	Example Response:
+		20 characters were found: 
+		Rick Sanchez, Black Rick, Cool Rick, Cop Rick, Cowboy Rick, Mega Fruit Farmer Rick, 
+		Pickle Rick, Plumber Rick, Rick D716-B, Rick D716-C, Rick J-22, Rick K-22, Slow Rick, 
+		Teacher Rick, Woman Rick, Baby Rick, Hairdresser Rick, Journalist Rick, Secret Service Rick, 
+		Steve Jobs Rick.
+
+2. Find Rick and Morty Characters by name and status
+	Command: 
+		geekbot ram loc [name] [type]
+	Params:
+		[name] - The name of the location
+		[type] - The location type (planet, dimension, etc.)
+	Returns: 
+		A count and list of all the locations matching the given parameters
+	Example: 
+		geekbot ram loc earth planet
+	Example Response:
+		20 locations were found: 
+		Earth (C-137), Post-Apocalyptic Earth, Cronenberg Earth, Earth (5-126), Earth (Replacement Dimension), 
+		Earth (C-500A), Earth (K-83), Earth (Unknown dimension), Earth (J19ζ7), Eric Stoltz Mask Earth,
+		Earth (Evil Rick's Target Dimension), Earth (Giant Telepathic Spiders Dimension), Earth (K-22), Earth (D-99), 
+		Earth (D716), Earth (D716-B), Earth (D716-C), Earth (J-22), Earth (C-35), Earth (Pizza Dimension).
+
+3. Rick and Morty episode details by episode number
+	Command: 
+		geekbot ram ep [episode number]
+	Params:
+		[episode number] - The total episode number 
+	Returns: 
+		The name, air date, and season/episode number of the given episode
+	Example: 
+		geekbot ram ep 22
+	Example Response:
+		Episode found:
+		Name: The Rickshank Rickdemption 
+		Air Date: April 1, 2017 
+		Season: S03E01
+
+
+DnD Commands
+	Include 'dnd' before entering command
+
+4. Find level up information by class and level
+	Command: 
+		geekbot dnd class [class] [level]
+	Params:
+		[class] - The name of the class (monk, warlock, etc.)
+		[level] - The level of the character
+	Returns: 
+		Ability score bonus, proficiency bonus, and all new features
+	Example: 
+		geekbot dnd class monk 2
+	Example Response:
+		Ability score bonus: 0
+		Proficiency bonus: 2
+		Features: Ki, Flurry of Blows, Patient Defense, Step of the Wind, Unarmored Movement.
+
+5. Find all monsters with challenge rating
+	Command: 
+		geekbot dnd mon [challenge rating]
+	Params:
+		[challenge rating] - The challenge rating of the monsters being searched for
+	Returns: 
+		All monsters with the given challenge rating
+	Example: 
+		geekbot dnd mon 3
+	Example Response:
+		Found 22 monsters:
+		Basilisk, Bearded Devil, Blue Dragon Wyrmling, Doppelganger, Giant Scorpion, Gold Dragon Wyrmling, Green Hag, Hell Hound,
+		Killer Whale, Knight, Manticore, Minotaur, Mummy, Nightmare, Owlbear, Phase Spider, Veteran, Werewolf, Human Form, Werewolf, 
+		Hybrid Form, Werewolf, Wolf Form, Wight, Winter Wolf.
